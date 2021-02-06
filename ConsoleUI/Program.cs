@@ -13,7 +13,7 @@ namespace ConsoleUI
         {
             //Data Transformation Object
             //IoC -- Daha sonra
-           // ProductTest();
+           ProductTest();
            // CategoryTest();
         }
 
