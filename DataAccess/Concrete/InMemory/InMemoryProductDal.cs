@@ -12,7 +12,7 @@ namespace DataAccess.Concrete.InMemory
     public class InMemoryProductDal : IProductDal
     {
         List<Product> _products;
-        public InMemoryProductDal()
+        public InMemoryProductDal()  //ctor
         {
             //Oracle,Sql Server,Postgres,MongoDb
             _products = new List<Product>
@@ -32,7 +32,7 @@ namespace DataAccess.Concrete.InMemory
 
         public void Delete(Product product)
         {
-            //LİNQ - Language Integrated Query
+            //LİNQ - Language Integrated Query - Dile gömülü sorgulama
             Product productToDelete = _products.SingleOrDefault(p=>p.ProductId == product.ProductId);
 
             _products.Remove(productToDelete);

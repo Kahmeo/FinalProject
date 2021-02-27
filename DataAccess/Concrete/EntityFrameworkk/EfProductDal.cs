@@ -16,6 +16,7 @@ namespace DataAccess.Concrete.EntityFrameworkk
     {
         public List<ProductDetailDto> GetProductDetails()
         {
+            //IDisposable pattern implementation of c#
             using (NorthwindContext context = new NorthwindContext())
             {
                 var result = from p in context.Products
